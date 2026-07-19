@@ -325,7 +325,7 @@
     "codigo": "ENGIN4505",
     "nombre": "Gestión de Procesos de Negocios",
     "semestre": 8,
-    "prerrequisitos": ["Investigación Operativa"],
+    "prerrequisitos": ["ENGIN3505"],
     "aprobado": false
   },
   {
