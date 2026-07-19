@@ -23,6 +23,7 @@ function construirMalla(ramos) {
 
     ramosDelSemestre.forEach(ramo => {
       const div = document.createElement('div');
+      div.className = 'ramo';
       div.dataset.codigo = ramo.codigo;
       div.textContent = ramo.nombre;
 
