@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #1a1a2e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.columna h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #aaa;
+}
+
+.ramo {
+  background: #2e2e4d;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ramo:hover {
+  transform: scale(1.05);
+}
+
+.ramo.aprobado {
+  background: #2e7d32;
+  border-color: #4caf50;
+}
+
+.ramo.seleccionado {
+  border-color: #ffeb3b;
+  border-width: 3px;
+}
+
+.ramo.prerrequisito {
+  background: #e65100;
+  border-color: #ff9800;
+}
+
+.ramo.dependiente {
+  background: #1565c0;
+  border-color: #2196f3;
+}
+
+#leyenda {
+  margin-top: 25px;
+  font-size: 13px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.caja {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
