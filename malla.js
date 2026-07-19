@@ -2,7 +2,12 @@ fetch('malla.json')
   .then(res => res.json())
   .then(ramos => construirMalla(ramos));
 
+let estados = JSON.parse(localStorage.getItem('estadosMalla')) || {};
+let seleccionActual = null;
+let datosRamos = [];
+
 function construirMalla(ramos) {
+  datosRamos = ramos;
   const contenedor = document.getElementById('malla');
   const totalSemestres = Math.max(...ramos.map(r => r.semestre));
 
@@ -18,11 +23,22 @@ function construirMalla(ramos) {
 
     ramosDelSemestre.forEach(ramo => {
       const div = document.createElement('div');
-      div.className = 'ramo' + (ramo.aprobado ? ' aprobado' : '');
-      div.textContent = ramo.nombre;
       div.dataset.codigo = ramo.codigo;
+      div.textContent = ramo.nombre;
 
-      div.addEventListener('click', () => manejarClick(ramo.codigo, ramos));
+      // Estado inicial: usa localStorage si existe, si no usa el "aprobado" del JSON
+      if (!estados[ramo.codigo]) {
+        estados[ramo.codigo] = ramo.aprobado ? 'aprobado' : 'pendiente';
+      }
+
+      aplicarClaseEstado(div, estados[ramo.codigo]);
+
+      div.addEventListener('click', () => manejarClick(ramo.codigo));
+
+      div.addEventListener('contextmenu', (e) => {
+        e.preventDefault(); // evita que salga el menú del navegador
+        cambiarEstado(ramo.codigo);
+      });
 
       columna.appendChild(div);
     });
@@ -33,10 +49,25 @@ function construirMalla(ramos) {
   crearLeyenda();
 }
 
-let seleccionActual = null;
+function aplicarClaseEstado(div, estado) {
+  div.classList.remove('aprobado', 'cursando', 'pendiente');
+  div.classList.add(estado);
+}
 
-function manejarClick(codigo, ramos) {
-  // Si haces clic en el mismo ramo, deselecciona
+function cambiarEstado(codigo) {
+  const ciclo = ['pendiente', 'cursando', 'aprobado'];
+  const actual = estados[codigo] || 'pendiente';
+  const siguienteIndex = (ciclo.indexOf(actual) + 1) % ciclo.length;
+  estados[codigo] = ciclo[siguienteIndex];
+
+  localStorage.setItem('estadosMalla', JSON.stringify(estados));
+
+  const div = document.querySelector(`.ramo-item[data-codigo="${codigo}"]`) 
+    || document.querySelector(`[data-codigo="${codigo}"]`);
+  if (div) aplicarClaseEstado(div, estados[codigo]);
+}
+
+function manejarClick(codigo) {
   if (seleccionActual === codigo) {
     seleccionActual = null;
     limpiarResaltados();
@@ -46,10 +77,10 @@ function manejarClick(codigo, ramos) {
   seleccionActual = codigo;
   limpiarResaltados();
 
-  const prerrequisitos = obtenerPrerrequisitosRecursivos(codigo, ramos);
-  const dependientes = obtenerDependientes(codigo, ramos);
+  const prerrequisitos = obtenerPrerrequisitosRecursivos(codigo, datosRamos);
+  const dependientes = obtenerDependientes(codigo, datosRamos);
 
-  document.querySelectorAll('.ramo').forEach(div => {
+  document.querySelectorAll('[data-codigo]').forEach(div => {
     const c = div.dataset.codigo;
     if (c === codigo) {
       div.classList.add('seleccionado');
@@ -61,7 +92,6 @@ function manejarClick(codigo, ramos) {
   });
 }
 
-// Encuentra TODOS los prerrequisitos, incluso los prerrequisitos de los prerrequisitos
 function obtenerPrerrequisitosRecursivos(codigo, ramos, encontrados = new Set()) {
   const ramo = ramos.find(r => r.codigo === codigo);
   if (!ramo) return encontrados;
@@ -76,7 +106,6 @@ function obtenerPrerrequisitosRecursivos(codigo, ramos, encontrados = new Set())
   return encontrados;
 }
 
-// Encuentra los ramos que tienen a "codigo" como prerrequisito directo
 function obtenerDependientes(codigo, ramos) {
   const encontrados = new Set();
   ramos.forEach(r => {
@@ -88,7 +117,7 @@ function obtenerDependientes(codigo, ramos) {
 }
 
 function limpiarResaltados() {
-  document.querySelectorAll('.ramo').forEach(div => {
+  document.querySelectorAll('[data-codigo]').forEach(div => {
     div.classList.remove('seleccionado', 'prerrequisito', 'dependiente');
   });
 }
@@ -98,6 +127,8 @@ function crearLeyenda() {
   leyenda.id = 'leyenda';
   leyenda.innerHTML = `
     <div class="leyenda-item"><div class="caja" style="background:#2e7d32"></div> Aprobado</div>
+    <div class="leyenda-item"><div class="caja" style="background:#f9a825"></div> Cursando</div>
+    <div class="leyenda-item"><div class="caja" style="background:#2e2e4d;border:1px solid #444"></div> Pendiente</div>
     <div class="leyenda-item"><div class="caja" style="background:#e65100"></div> Prerrequisito (falta)</div>
     <div class="leyenda-item"><div class="caja" style="background:#1565c0"></div> Requiere este ramo</div>
     <div class="leyenda-item"><div class="caja" style="border:3px solid #ffeb3b"></div> Seleccionado</div>
