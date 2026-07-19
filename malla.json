@@ -1,0 +1,142 @@
+[
+  {
+    "codigo": "ENMEM1005",
+    "nombre": "Métodos Matemáticos I",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENNEG1005",
+    "nombre": "Gestión y Empresa",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENCON1005",
+    "nombre": "Contabilidad",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENGIN1005",
+    "nombre": "Programación para Analítica de Datos",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENCOM1005",
+    "nombre": "Comunicación",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENNEG1505",
+    "nombre": "Ética y Negocios",
+    "semestre": 2,
+    "prerrequisitos": ["ENCOM1005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENGIN1505",
+    "nombre": "Tecnología y Sistemas de Información",
+    "semestre": 2,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENECO1005",
+    "nombre": "Introducción a la Economía",
+    "semestre": 2,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENMEM1505",
+    "nombre": "Métodos Matemáticos II",
+    "semestre": 2,
+    "prerrequisitos": ["ENMEM1005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENIDI1505",
+    "nombre": "Inglés I",
+    "semestre": 2,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENCON1510",
+    "nombre": "Fundamentos de Costos",
+    "semestre": 2,
+    "prerrequisitos": ["ENCON1005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "LIB3440",
+    "nombre": "Libre I: Voleibol",
+    "semestre": 2,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCSH2005",
+    "nombre": "Introducción al Pensamiento Económico y Político",
+    "semestre": 3,
+    "prerrequisitos": ["ENECO1005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENMIC1505",
+    "nombre": "Introducción a la Microeconomía",
+    "semestre": 3,
+    "prerrequisitos": ["ENECO1005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENIDI2005",
+    "nombre": "Inglés II",
+    "semestre": 3,
+    "prerrequisitos": ["ENIDI1505"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENMEM2005",
+    "nombre": "Métodos Matemáticos III",
+    "semestre": 3,
+    "prerrequisitos": ["ENMEM1505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENAUD2005",
+    "nombre": "Gestión de Riesgos y Control interno",
+    "semestre": 3,
+    "prerrequisitos": ["ENCON1510"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENMES2005",
+    "nombre": "Estadística I",
+    "semestre": 3,
+    "prerrequisitos": ["ENNEG1005","ENMEM1005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCON2505",
+    "nombre": "Contabilidad Financiera",
+    "semestre": 4,
+    "prerrequisitos": ["ENCON1005","ENMEM2005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "00",
+    "nombre": "00",
+    "semestre": 0,
+    "prerrequisitos": ["00"],
+    "aprobado": false
+  }
+]
