@@ -133,10 +133,262 @@
     "aprobado": true
   },
   {
-    "codigo": "00",
-    "nombre": "00",
-    "semestre": 0,
-    "prerrequisitos": ["00"],
+    "codigo": "ENMAC2005",
+    "nombre": "Introducción a la Macroeconomía",
+    "semestre": 4,
+    "prerrequisitos": ["ENECO1005","ENMEM1505"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENIDI2505",
+    "nombre": "Inglés III",
+    "semestre": 4,
+    "prerrequisitos": ["ENIDI2005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENFIN2505",
+    "nombre": "Finanzas",
+    "semestre": 4,
+    "prerrequisitos": ["ENMEM1505","ENCON1005","ENMES2005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN2505",
+    "nombre": "Razonamiento Basado en Datos",
+    "semestre": 4,
+    "prerrequisitos": ["ENGIN1005","ENGIN1505","ENMES2005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENMES2505",
+    "nombre": "Estadística II",
+    "semestre": 4,
+    "prerrequisitos": ["ENMES2005","ENMEM1505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENTAL3010",
+    "nombre": "Taller de Integración",
+    "semestre": 5,
+    "prerrequisitos": ["ENFIN2505","ENGIN2505","ENMES2505","ENMEM2005"],
+    "aprobado": true
+  },
+  {
+    "codigo": "ENAUD3005",
+    "nombre": "Fundamentos de Auditoría",
+    "semestre": 5,
+    "prerrequisitos": ["ENAUD2005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCON3510",
+    "nombre": "Análisis Contable",
+    "semestre": 5,
+    "prerrequisitos": ["ENCON2505","ENFIN2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIMP3005",
+    "nombre": "Sistemas de Tributación en la Renta",
+    "semestre": 5,
+    "prerrequisitos": ["ENMAC2005","ENMES2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENMEC3015",
+    "nombre": "Métodos Cuantitativos",
+    "semestre": 5,
+    "prerrequisitos": ["ENGIN2505","ENMEM2005","ENCON2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIDI3005",
+    "nombre": "Inglés IV",
+    "semestre": 5,
+    "prerrequisitos": ["ENIDI2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "LIB3250",
+    "nombre": "Libre II: Escalada Deportiva",
+    "semestre": 5,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENAUD3505",
+    "nombre": "Desarrollo de Auditoría",
+    "semestre": 6,
+    "prerrequisitos": ["ENAUD3005","ENTAL3010"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCGE3005",
+    "nombre": "Estrategia y Presupuesto",
+    "semestre": 6,
+    "prerrequisitos": ["ENCON1005","ENFIN2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENFIN4005",
+    "nombre": "Análisis Financiero e Inversiones",
+    "semestre": 6,
+    "prerrequisitos": ["ENMEC3015","ENCON3510"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN3510",
+    "nombre": "Sistemas de Aplicaciones",
+    "semestre": 6,
+    "prerrequisitos": ["ENGIN2505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIMP3505",
+    "nombre": "Sistemas de Tributación Tipo Consumo",
+    "semestre": 6,
+    "prerrequisitos": ["ENIMP3005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIDI3505",
+    "nombre": "Inglés V",
+    "semestre": 6,
+    "prerrequisitos": ["ENIDI3005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCSH3505",
+    "nombre": "Derecho y Empresa",
+    "semestre": 7,
+    "prerrequisitos": ["ENNEG1505","ENCSH2005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENFIN4515",
+    "nombre": "Gestión Financiera Corporativa",
+    "semestre": 7,
+    "prerrequisitos": ["ENFIN4005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN3505",
+    "nombre": "Investigación Operativa",
+    "semestre": 7,
+    "prerrequisitos": ["ENGIN2505","ENMEM2005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN4015",
+    "nombre": "Auditoría de Tecnología de la Información",
+    "semestre": 7,
+    "prerrequisitos": ["ENAUD3505","ENGIN3510"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIMP4005",
+    "nombre": "Economía de los Impuestos",
+    "semestre": 7,
+    "prerrequisitos": ["ENMAC2005","ENMIC1505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "LIB3430",
+    "nombre": "Libre III: Tenis",
+    "semestre": 7,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCGE4510",
+    "nombre": "Control Financiero",
+    "semestre": 8,
+    "prerrequisitos": ["ENCGE3005"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENCON4505",
+    "nombre": "Contabilidad Avanzada",
+    "semestre": 8,
+    "prerrequisitos": ["ENFIN4515","ENCON3510"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN4005",
+    "nombre": "Machine Learning",
+    "semestre": 8,
+    "prerrequisitos": ["ENGIN3505","ENMEC3015"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENGIN4505",
+    "nombre": "Gestión de Procesos de Negocios",
+    "semestre": 8,
+    "prerrequisitos": ["Investigación Operativa"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENIMP4505",
+    "nombre": "Gestión Legal Tributaria",
+    "semestre": 8,
+    "prerrequisitos": ["ENCSH3505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENTAL5010",
+    "nombre": "Curso de Integración Profesional",
+    "semestre": 9,
+    "prerrequisitos": ["ENIMP4505","ENGIN4005","ENCGE4510","ENGIN4505","ENCON4505"],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENMEM1004",
+    "nombre": "Tópicos Matemáticos Introductorios",
+    "semestre": 9,
+    "prerrequisitos": [],
+    "aprobado": true
+  },
+  {
+    "codigo": "ELECTIVO2",
+    "nombre": "Electivo Profesional II",
+    "semestre": 9,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ELECTIVO3",
+    "nombre": "Electivo Profesional III",
+    "semestre": 9,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ELECTIVO4",
+    "nombre": "Electivo Profesional IV",
+    "semestre": 9,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ELECTIVO5",
+    "nombre": "Electivo Profesional V",
+    "semestre": 10,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ELECTIVO6",
+    "nombre": "Electivo Profesional VI",
+    "semestre": 10,
+    "prerrequisitos": [],
+    "aprobado": false
+  },
+  {
+    "codigo": "ENPRA5000",
+    "nombre": "Práctica Profesional",
+    "semestre": 10,
+    "prerrequisitos": [],
     "aprobado": false
   }
 ]
