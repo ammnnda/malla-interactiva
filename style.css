@@ -18,7 +18,7 @@ h1 {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
