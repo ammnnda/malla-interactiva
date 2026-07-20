@@ -33,7 +33,7 @@ h1 {
 .columna h3 {
   font-size: 14px;
   margin-bottom: 5px;
-  color: #a9805f;
+  color: #664c32;
 }
 
 .ramo {
@@ -74,15 +74,15 @@ h1 {
 }
 
 .ramo.prerrequisito {
-  background: #876449;
-  border-color: #664c32;
+  background: #f783a8;
+  border-color: #e85f8c;
   color: #fdf5f2;
 }
 
 .ramo.dependiente {
-  background: #f783a8;
-  border-color: #e85f8c;
-  color: #fdf5f2;
+  background: #ffabc7;
+  border-color: #f7b7d6;
+  color: #6b1f3a;
 }
 
 #leyenda {
