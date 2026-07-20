@@ -127,12 +127,12 @@ function crearLeyenda() {
   const leyenda = document.createElement('div');
   leyenda.id = 'leyenda';
   leyenda.innerHTML = `
-    <div class="leyenda-item"><div class="caja" style="background:#2e7d32"></div> Aprobado</div>
-    <div class="leyenda-item"><div class="caja" style="background:#f9a825"></div> Cursando</div>
-    <div class="leyenda-item"><div class="caja" style="background:#2e2e4d;border:1px solid #444"></div> Pendiente</div>
-    <div class="leyenda-item"><div class="caja" style="background:#e65100"></div> Prerrequisito (falta)</div>
-    <div class="leyenda-item"><div class="caja" style="background:#1565c0"></div> Requiere este ramo</div>
-    <div class="leyenda-item"><div class="caja" style="border:3px solid #ffeb3b"></div> Seleccionado</div>
+    <div class="leyenda-item"><div class="caja" style="background:#b8db76"></div> Aprobado</div>
+    <div class="leyenda-item"><div class="caja" style="background:#f7b7d6"></div> Cursando</div>
+    <div class="leyenda-item"><div class="caja" style="background:#e0d2c3;border:1px solid #c9b193"></div> Pendiente</div>
+    <div class="leyenda-item"><div class="caja" style="background:#f783a8"></div> Prerrequisito (falta)</div>
+    <div class="leyenda-item"><div class="caja" style="background:#ffabc7"></div> Requiere este ramo</div>
+    <div class="leyenda-item"><div class="caja" style="border:3px solid #664c32"></div> Seleccionado</div>
   `;
   document.body.appendChild(leyenda);
 }
